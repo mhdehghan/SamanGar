@@ -17,9 +17,9 @@ public class Normalizer {
     List<String> puncs;
 
     public Normalizer() {
+        puncs=new ReadData().readFile("resources/Normalizer/punctuations.txt");
         charSet=new ReadData().readMap("resources/Normalizer/replaceChars.txt");
         validCharSet=new ReadData().readChars("resources/Normalizer/validChars.txt");
-        puncs=new ReadData().readFile("resources/Normalizer/punctuations.txt");
     }
 
     public Normalizer(String charSetFile,String validCharFile,String punctuationsFile) {
