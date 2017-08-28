@@ -8,6 +8,9 @@ public class Processor {
     public static void main(String[] args) {
         // write your code here
 
+
+
+
         //ReadData readData=new ReadData();
         //readData.writeCompressedFile("test.txt","این یک متن تست است.");
         //System.out.println(readData.readCompressedFile("test.txt"));
