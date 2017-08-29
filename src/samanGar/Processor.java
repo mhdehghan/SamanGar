@@ -1,7 +1,9 @@
 package samanGar;
 
 import samanGar.normalizer.Normalizer;
+import samanGar.posTagger.POSTagger;
 import samanGar.sentence.Sentence;
+import samanGar.tokenizer.WordTokenizer;
 
 public class Processor {
 
@@ -10,13 +12,9 @@ public class Processor {
 
 
 
-
-        //ReadData readData=new ReadData();
-        //readData.writeCompressedFile("test.txt","این یک متن تست است.");
-        //System.out.println(readData.readCompressedFile("test.txt"));
-        //if(true)return;
-
         Normalizer normalizer = new Normalizer();
+        WordTokenizer wordTokenizer=new WordTokenizer();
+        //POSTagger posTagger=new POSTagger();
 
         String inSentence = "";
         while (true) {
@@ -27,8 +25,13 @@ public class Processor {
 
             if (inSentence.length() == 0) break;
             normalizer.process(sentence);
+            System.out.println("Normalizer: Your sentence is: " + sentence.toString());
 
-            System.out.println("Your sentence is: " + sentence.toString());
+            wordTokenizer.process(sentence);
+            System.out.println("WordTokenizer: Your sentence is: " + sentence.toString());
+
+            //posTagger.process(sentence);
+            //System.out.println("POSTagger: Your sentence is: " + sentence.toString());
 
         }
     }
