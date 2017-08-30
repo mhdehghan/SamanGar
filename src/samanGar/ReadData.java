@@ -114,6 +114,7 @@ public class ReadData
         try {
             InputStream is = new ByteArrayInputStream(value.getBytes());
             GZIPOutputStream gzipOS = new GZIPOutputStream(new FileOutputStream(fileName));
+
             byte[] buffer = new byte[1024];
             int len;
             while ((len = is.read(buffer)) != -1) {
