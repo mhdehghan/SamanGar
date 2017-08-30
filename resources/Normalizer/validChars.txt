@@ -115,7 +115,7 @@ W
 X
 Y
 Z
-#Lower Case
+#English Characters (Lower Case)
 a
 b
 c
